@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ikonos — Automatizaciones sencillas de IA y formación para pymes</title>
+  <meta name="description" content="Integramos IA en el correo, documentos y gestión diaria de tu pyme. Empieza con un piloto pequeño gratuito antes de comprometer presupuesto.">
+  <meta name="theme-color" content="#1B3162">
+
+  <meta property="og:title" content="Ikonos — Automatizaciones sencillas de IA y formación para pymes">
+  <meta property="og:description" content="Integramos IA en el correo, documentos y gestión diaria de tu pyme. Empieza con un piloto pequeño gratuito antes de comprometer presupuesto.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ikonos.es/">
+
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Ikonos, inicio">
+        <picture>
+          <source srcset="assets/ikonos-logo.webp" type="image/webp">
+          <img src="assets/ikonos-logo.png" alt="Ikonos" width="144" height="47">
+        </picture>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#que-hacemos">Qué hacemos</a>
+        <a href="#como-empezamos">Cómo empezamos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-copy">
+          <h1>Integramos IA en las herramientas que ya usas para quitar trabajo manual.</h1>
+          <p class="hero-lead">
+            Somos un grupo de ingenieros de la Universidad Politécnica de Madrid. Conectamos tu correo, facturas o documentos con automatizaciones sencillas que tu equipo entiende desde el primer día. Empezamos probando un caso real con un piloto gratuito.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://calendar.app.google/aPemA1wRVmJKRHiK9" target="_blank" rel="noopener noreferrer">
+              Reservar llamada de 15 min
+            </a>
+            <a class="btn btn-secondary" href="#contacto">
+              Enviar consulta sin compromiso
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="que-hacemos" aria-labelledby="titulo-que-hacemos">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="titulo-que-hacemos">Qué hacemos</h2>
+          <p class="section-intro">
+            Automatizaciones bien acotadas sobre tareas concretas del día a día, sin cambiar el software que ya utiliza tu equipo.
+          </p>
+        </div>
+
+        <div class="flow-workbench">
+          <div class="flow-tabs" role="tablist" aria-label="Casos de uso habituales">
+            <button class="flow-tab" type="button" role="tab" id="tab-facturas" aria-selected="true" aria-controls="panel-facturas" data-tab="facturas">
+              Facturas y documentación
+            </button>
+            <button class="flow-tab" type="button" role="tab" id="tab-correos" aria-selected="false" aria-controls="panel-correos" data-tab="correos" tabindex="-1">
+              Correos repetitivos
+            </button>
+            <button class="flow-tab" type="button" role="tab" id="tab-formacion" aria-selected="false" aria-controls="panel-formacion" data-tab="formacion" tabindex="-1">
+              Formación al equipo
+            </button>
+          </div>
+
+          <div class="flow-panel" role="tabpanel" id="panel-facturas" aria-labelledby="tab-facturas">
+            <div class="flow-grid">
+              <div class="flow-stage">
+                <span class="stage-index">Entrada</span>
+                <p>Llegan PDFs, facturas o justificantes por correo de clientes y proveedores.</p>
+                <code class="stage-sample">adjunto: factura_proveedor_04.pdf</code>
+              </div>
+              <div class="flow-stage flow-stage-core">
+                <span class="stage-index">Proceso Ikonos</span>
+                <p>Se extraen automáticamente proveedor, fecha, concepto e importe y se detectan datos incompletos.</p>
+                <code class="stage-sample">extraer_campos() + validar_totales()</code>
+              </div>
+              <div class="flow-stage">
+                <span class="stage-index">Salida</span>
+                <p>Todo queda ordenado en vuestra hoja de cálculo o carpeta de trabajo, listo para revisión humana.</p>
+                <code class="stage-sample">fila lista en Excel / Drive para validar</code>
+              </div>
+            </div>
+          </div>
+
+          <div class="flow-panel" role="tabpanel" id="panel-correos" aria-labelledby="tab-correos" hidden>
+            <div class="flow-grid">
+              <div class="flow-stage">
+                <span class="stage-index">Entrada</span>
+                <p>Entran mensajes habituales de clientes pidiendo citas, estado de trámites o información básica.</p>
+                <code class="stage-sample">asunto: documentación pendiente Q1</code>
+              </div>
+              <div class="flow-stage flow-stage-core">
+                <span class="stage-index">Proceso Ikonos</span>
+                <p>Se clasifican por tipo y se prepara un borrador de respuesta usando vuestra documentación interna.</p>
+                <code class="stage-sample">clasificar_tema() + redactar_borrador()</code>
+              </div>
+              <div class="flow-stage">
+                <span class="stage-index">Salida</span>
+                <p>El equipo revisa y envía en segundos en lugar de redactar cada correo desde cero.</p>
+                <code class="stage-sample">borrador en tu bandeja listo para revisar</code>
+              </div>
+            </div>
+          </div>
+
+          <div class="flow-panel" role="tabpanel" id="panel-formacion" aria-labelledby="tab-formacion" hidden>
+            <div class="flow-grid">
+              <div class="flow-stage">
+                <span class="stage-index">Entrada</span>
+                <p>El equipo quiere usar herramientas de IA en su trabajo diario pero no sabe por dónde empezar con seguridad.</p>
+                <code class="stage-sample">tareas reales de vuestro equipo</code>
+              </div>
+              <div class="flow-stage flow-stage-core">
+                <span class="stage-index">Proceso Ikonos</span>
+                <p>Sesiones prácticas centradas únicamente en vuestros casos reales, documentos y flujos habituales.</p>
+                <code class="stage-sample">taller práctico sobre vuestro día a día</code>
+              </div>
+              <div class="flow-stage">
+                <span class="stage-index">Salida</span>
+                <p>Autonomía real para aprovechar la herramienta en el día a día sin depender siempre de terceros.</p>
+                <code class="stage-sample">guía interna y criterios claros de uso</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="como-empezamos" aria-labelledby="titulo-como-empezamos">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="titulo-como-empezamos">Cómo empezamos</h2>
+        </div>
+
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-num" aria-hidden="true">1</span>
+            <div class="step-body">
+              <h3>Charla breve de 15 minutos</h3>
+              <p>Nos cuentas cómo trabajáis hoy y detectamos una única tarea repetitiva donde se pueda ahorrar tiempo rápido.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-num" aria-hidden="true">2</span>
+            <div class="step-body">
+              <h3>Piloto pequeño gratuito</h3>
+              <p>Montamos una prueba acotada sobre ese proceso concreto para que compruebes la utilidad real antes de gastar nada.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-num" aria-hidden="true">3</span>
+            <div class="step-body">
+              <h3>Proyecto inicial (&lt; 500 €) o formación</h3>
+              <p>Si el piloto os ayuda, entregamos la integración lista para usar, explicable y con mantenimiento mínimo.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-about" aria-labelledby="titulo-quien">
+      <div class="container about-grid">
+        <h2 id="titulo-quien">Quién hay detrás</h2>
+        <p>
+          Detrás de Ikonos estamos un equipo de ingenieros jóvenes de distintas especialidades enfocados en pymes que quieren empezar con IA de forma práctica. Trabajamos con pruebas pequeñas sobre procesos reales para que compruebes el ahorro de tiempo antes de invertir en proyectos más grandes.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="titulo-contacto">Hablemos 15 minutos</h2>
+          <p class="section-intro">
+            Cuéntanos qué tarea os quita más tiempo hoy y vemos si tiene sentido probar un piloto pequeño.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-calendar">
+            <h3>Reserva directa</h3>
+            <p>
+              Elige directamente un hueco de 15 minutos en el calendario. Si no vemos un ahorro de tiempo claro en vuestro proceso, te lo diremos en la propia llamada.
+            </p>
+            <a class="btn btn-primary" href="https://calendar.app.google/aPemA1wRVmJKRHiK9" target="_blank" rel="noopener noreferrer">
+              Elegir hueco en el calendario
+            </a>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <h3>¿Prefieres escribir primero?</h3>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="empresa">Empresa</label>
+                <input id="empresa" name="empresa" type="text" autocomplete="organization">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Correo electrónico</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="mensaje">¿Qué tarea repetitiva te gustaría agilizar?</label>
+              <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+
+            <!-- Campo honeypot oculto para filtrar envíos automáticos -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="website">Sitio web</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-footer">
+              <button class="btn btn-primary" type="submit" id="submit-btn">Enviar consulta</button>
+              <p class="privacy-note">Solo usaremos estos datos para responder a tu consulta.</p>
+            </div>
+
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-name">Ikonos</span>
+        <span>Agilizando tu empresa</span>
+      </div>
+      <div class="footer-meta">
+        <span>Madrid, España</span>
+        <span>Adolfo Trocolí</span>
+        <!-- Añadir enlace a LinkedIn cuando esté definido en web-copy.md -->
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
