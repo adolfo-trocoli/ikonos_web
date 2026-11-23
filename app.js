@@ -1,5 +1,5 @@
-// Pega aquí la URL /exec generada al implementar tu Google Apps Script.
-const FORM_WEBHOOK_URL = "";
+// URL /exec generada al implementar el Google Apps Script del formulario.
+const FORM_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxLdoXQwxKYu4lNShcfoo4mdETpKfxieJLDvF_l3vKEPEG5JkfayXf3gv_QbrwjpiHPWg/exec";
 
 (function initTabs() {
   const tabList = document.querySelector(".flow-tabs");
