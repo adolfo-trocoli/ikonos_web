@@ -70,6 +70,7 @@ const FORM_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxLdoXQwxKYu4l
     const email = form.email.value.trim();
     const mensaje = form.mensaje.value.trim();
     const website = form.website.value.trim();
+    const privacidad = form.privacidad ? form.privacidad.checked : true;
 
     // Si el campo oculto viene relleno, lo descartamos en silencio (honeypot).
     if (website !== "") {
@@ -85,6 +86,12 @@ const FORM_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxLdoXQwxKYu4l
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setStatus("Revisa el formato del correo electrónico.", "err");
+      return;
+    }
+
+    if (!privacidad) {
+      setStatus("Debes aceptar la Política de Privacidad para enviar la consulta.", "err");
+      form.privacidad.focus();
       return;
     }
 
